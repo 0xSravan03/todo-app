@@ -21,7 +21,7 @@ function App() {
   }
 
   function toggleTodo(id) {
-    setTodos((prev) => prev.map(todo => todo.id == id ? {...todo, completed : true} : todo))
+    setTodos((prev) => prev.map(todo => todo.id == id ? { ...todo, completed : !todo.completed } : todo))
   }
 
   return (
